@@ -83,3 +83,25 @@ func isOpeningBracket(value string) bool {
 func isClosingBracket(value string) bool {
 	return value == "]"
 }
+
+/*
+Alternative resolution
+func minSwaps(s string) int {
+    count, open, close := 0, 0, 0
+    for _, c := range s {
+        if c == '[' {
+            open++
+        } else if c == ']' {
+            close++
+        }
+
+        if close > open {
+            count++
+            close--
+            open++
+        }
+    }
+    return count
+}
+*/
+		     
